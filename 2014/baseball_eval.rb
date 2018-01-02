@@ -12,7 +12,7 @@ end
 def dcg(a)
 	return 0 if a.empty?
 	if false
-		a[0]+2.step(a.size).map{|i|a[i-1]/Math.log2(i)}.sum
+		a[0]+2.step(a.size).map{|i|a[i-1]/Math.log2(i+1)}.sum
 	else
 		1.step(a.size).map{|i|(2**a[i-1]-1)/Math.log2(i+1)}.sum
 	end
